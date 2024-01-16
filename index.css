@@ -1,0 +1,510 @@
+/* css page reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* makes sure content fits to page size */
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: rgb(199, 141, 159);
+    box-sizing: border-box;
+
+}
+
+/* general rules */
+h2 {
+    font-size: 70px;
+    margin-left: 50px;
+}
+
+p {
+    font-size: 24px;
+    margin-left: 50px;
+}
+
+/* navigation bar */
+nav {
+    background-color: rgba(199, 141, 159, 0.5);
+    width: 100%;
+    height: 40px;
+    font-size: 24px;
+    position: sticky;
+    font-family: Oswald, 'Times New Roman', serif;
+    text-align: right;
+    justify-content: space-between;
+    margin-right: 100px;
+    top: 0;
+    padding: 0;
+    display: flex;
+    z-index: 99;
+}
+
+
+nav a {
+    color: rgb(84, 39, 50);
+    text-decoration: none;
+    padding-right: 50px;
+}
+
+nav a:hover {
+    color: rgb(229, 186, 199);
+}
+
+.name {
+    color: rgba(84, 39, 50, 0.5);
+    text-align: left;
+    margin-left: 50px;
+}
+
+.categories {
+    text-align: right;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* header */
+
+#hello {
+    height: 550px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 22% 10%;
+}
+
+#hello img {
+    width: 500px;
+    max-width: 100%;
+    height: 600px;
+    border-radius: 50%;
+    position: relative;
+    margin-top: 130px;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin-left: 20px;
+    border: 10px dotted rgb(64, 30, 38);
+    margin-bottom: 50px;
+}
+
+#hello header {
+    color: rgb(64, 30, 38);
+    padding-top: 80px;
+    font-size: 64px;
+    max-width: 700px;
+    margin-left: 0;
+}
+
+#hello header h5 {
+    font-size: 24px;
+    padding-right: 30px;
+    margin-left: 0;
+}
+
+.jk {
+    color: hsla(342, 42%, 42%, 1);
+}
+
+/* about */
+
+
+#about {
+    margin-top: 175px;
+    padding-top: 50px;
+    color: rgb(64, 30, 38);
+    width: 100%;
+    height: 250px;
+    margin-bottom: 340px;
+}
+
+#about p {
+    color: rgb(64, 30, 38);
+    padding-top: 25px;
+    max-width: 1125px;
+    font-size: 30px;
+    font-family: Garamond, serif;
+    line-height: 40px;
+    padding-right: 30px;
+
+}
+
+/* projects */
+
+
+#projects {
+    padding-top: 70px;
+    width: 100%;
+    height: 550px;
+    margin-bottom: 100px;
+}
+
+
+#projects h2 {
+    margin-top: 0;
+    padding-top: 0;
+    color: rgb(64, 30, 38);
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+#projects a {
+    color: rgb(64, 30, 38);
+    text-decoration: none;
+    font-size: 24px;
+    font-family: Garamond, serif;
+}
+
+/* carousel slider */
+
+#slider {
+    position: relative;
+    width: 50%;
+    height: 32vw;
+    transform-style: preserve-3d;
+    margin: 50px auto;
+    font-family: "Helvetica Neue", sans-serif;
+    perspective: 1400px;
+}
+
+input[type="radio"] {
+    position: relative;
+    top: 108%;
+    left: 50%;
+    width: 18px;
+    height: 18px;
+    margin: 0 15px 0 0;
+    transform: translateX(-83px);
+    cursor: pointer;
+    opacity: 0.4;
+}
+
+input[type="radio"]:nth-child(4) {
+    margin-right: 0px;
+}
+
+input[type="radio"]:checked {
+    opacity: 1;
+}
+
+#slider label,
+#slider label img {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+    font-size: 70px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 100ms ease;
+}
+
+#slider label a {
+
+    font-size: 16px;
+    font-family: Oswald, 'Times New Roman', serif;
+    font-weight: 300;
+    padding-bottom: 2px;
+    color: white;
+    background-color: rgba(64, 30, 38, 0.3);
+    z-index: 99;
+    text-decoration: underline;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+
+
+}
+
+/* current slide */
+
+#s1:checked~#slide1,
+#s2:checked~#slide2,
+#s3:checked~#slide3,
+#s4:checked~#slide4 {
+    transform: translate3d(0%, 0, 0px);
+    box-shadow: 0 13px 26px rgba(0, 0, 0, 0.3), 0 12px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* next slide */
+
+#s1:checked~#slide2,
+#s2:checked~#slide3,
+#s3:checked~#slide4,
+#s4:checked~#slide1 {
+    transform: translate3d(20%, 0, -100px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* previous slide */
+
+#s1:checked~#slide4,
+#s2:checked~#slide1,
+#s3:checked~#slide2,
+#s4:checked~#slide3 {
+    transform: translate3d(-20%, 0, -100px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* next next slide */
+
+#s1:checked~#slide3,
+#s2:checked~#slide4,
+#s3:checked~#slide1,
+#s4:checked~#slide2 {
+    transform: translate3d(40%, 0, -250px);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* previous previous slide */
+
+#s1:checked~#slide3,
+#s2:checked~#slide4,
+#s3:checked~#slide1,
+#s4:checked~#slide2 {
+    transform: translate3d(-40%, 0, -250px);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* contacts */
+
+#contacts {
+    margin-top: 300px;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    color: rgb(64, 30, 38);
+}
+
+.conlink {
+    width: 100%;
+    padding-top: 30px;
+    margin-left: 60px;
+    display: grid;
+    line-height: 40px;
+    font-size: 24px;
+}
+
+#contacts a {
+    color: rgb(64, 30, 38);
+    font-family: Garamond, serif;
+
+}
+
+#contacts a:hover {
+    color: rgb(229, 186, 199);
+}
+
+/* skills 
+
+#skills {
+    color: rgb(64, 30, 38);
+    padding-top: 400px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+#skills ul {
+    padding-top: 25px;
+    font-size: 36px;
+    margin-left: 48px;
+    line-height: 40px;
+} */
+
+
+/* footer */
+
+footer {
+    width: 100%;
+    height: 50px;
+    background-color: rgba(64, 30, 38, 0.5);
+    color: rgb(229, 186, 199);
+    margin: 0px;
+}
+
+footer p {
+    margin-left: 20px;
+    font-size: 18px;
+    padding-top: 12px;
+}
+
+/* media queries */
+
+/* max width 1063 */
+
+/* hello section*/
+@media only screen and (max-width: 1063px) {
+
+    * {
+        box-sizing: border-box;
+
+    }
+
+    #hello {
+        padding: 18% 8%;
+    }
+
+    #hello img {
+        width: 400px;
+        height: 500px;
+        margin-top: 100px;
+        border: 8px dotted rgb(64, 30, 38);
+        margin-bottom: 30px;
+    }
+
+    #hello header {
+        font-size: 48px;
+    }
+
+    #hello header h5 {
+        font-size: 18px;
+    }
+}
+
+/* about section */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 800px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+    #about {
+        margin-top: 100px;
+        margin-bottom: 150px;
+    }
+
+    #about p {
+        font-size: 20px;
+        line-height: 30px;
+        margin-right: 20px;
+    }
+}
+
+/* max width 830px */
+
+/* tablets */
+@media only screen and (max-width: 830px) {
+    #hello img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+
+    }
+
+    #hello header {
+        font-size: 48px;
+        max-width: 600px;
+    }
+
+    #hello header h5 {
+        font-size: 18px;
+    }
+
+    #about {
+        margin-top: 50px;
+    }
+
+    #contacts {
+        margin-top: 50px;
+        padding-bottom: 100px;
+    }
+}
+
+
+
+/* iphone max 375 */
+
+@media only screen and (max-width: 540px) {
+    #hello header {
+        font-size: 9vw;
+        max-width: 100%;
+        padding-top: 10vw;
+        margin-right: 0;
+    }
+
+    #hello header h5 {
+        font-size: 5.5vw;
+        position: absolute;
+        padding-top: 20px;
+        margin: 0;
+    }
+
+    #hello img {
+        margin-left: 5%;
+        width: 70%;
+        position: relative;
+        margin-top: 20vw;
+        height: auto;
+        border: 2vw dotted rgb(64, 30, 38);
+    }
+
+
+    #about {
+        margin-top: 50px;
+    }
+
+    #about p {
+        font-size: 24px;
+    }
+
+
+    h2 {
+        font-size: 8vw;
+
+    }
+
+    #projects h2 {
+        margin-top: 300px;
+    }
+
+    #slider {
+        width: 250px;
+    }
+
+    #contacts {
+        margin-top: 50px;
+        padding-bottom: 100px;
+    }
+}
+
+@media only screen and (max-width: 760px) {
+
+    .name h3 {
+        font-size: 0.1px;
+        color: transparent;
+    }
+
+    nav {
+        margin-right: 0;
+        position: relative;
+    }
+
+    nav a {
+        padding: 0 10px;
+        font-size: 16px;
+    }
+
+    #hello {
+        padding-top: 10px;
+    }
+
+    .categories {
+        margin-right: 140px;
+    }
+
+    nav,
+    nav a,
+    .categories {
+        white-space: nowrap;
+    }
+
+
+
+}
