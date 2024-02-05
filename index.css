@@ -3,14 +3,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow: hidden;
 }
 
 /* makes sure content fits to page size */
 body {
     max-width: 100%;
     overflow-x: hidden;
-    overflow-y: auto;
     background-color: rgb(199, 141, 159);
     box-sizing: border-box;
 
@@ -421,7 +419,7 @@ footer p {
 
 /* iphone max 375 */
 
-@media only screen and (max-width: 540px) {
+@media only screen and (max-width: 560px) {
     #hello header {
         font-size: 9vw;
         max-width: 100%;
@@ -472,6 +470,8 @@ footer p {
         margin-top: 50px;
         padding-bottom: 100px;
     }
+
+
 }
 
 @media only screen and (max-width: 760px) {
