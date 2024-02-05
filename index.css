@@ -90,6 +90,12 @@ nav a:hover {
     margin-bottom: 50px;
 }
 
+.zoomin {
+    width: 300px;
+    height: auto;
+
+}
+
 #hello header {
     color: rgb(64, 30, 38);
     padding-top: 80px;
